@@ -1,0 +1,33 @@
+﻿<Window x:Class="ImageDisplayApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Image Display App" Height="500" Width="900" Background="#FFEFF8FF">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title -->
+        <TextBlock Text="Image Display App" 
+                   FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="0,0,0,15" 
+                   Foreground="#FF37474F" />
+
+        <!-- Image Display Section -->
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal">
+            <!-- Image 1 -->
+            <Border BorderBrush="#FFB0BEC5" BorderThickness="1" CornerRadius="10" Background="White" Padding="5" Margin="5">
+                <Image x:Name="Image1" Width="250" Height="200" Stretch="Uniform" />
+            </Border>
+            <!-- Image 2 -->
+            <Border BorderBrush="#FFB0BEC5" BorderThickness="1" CornerRadius="10" Background="White" Padding="5" Margin="5">
+                <Image x:Name="Image2" Width="250" Height="200" Stretch="Uniform" />
+            </Border>
+            <!-- Image 3 -->
+            <Border BorderBrush="#FFB0BEC5" BorderThickness="1" CornerRadius="10" Background="White" Padding="5" Margin="5">
+                <Image x:Name="Image3" Width="250" Height="200" Stretch="Uniform" />
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
