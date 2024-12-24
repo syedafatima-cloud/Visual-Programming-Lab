@@ -1,0 +1,51 @@
+<Window x:Class="OrderManagementApp.AddressInputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Address" Height="300" Width="500"
+        Background="#1e1e1e" Foreground="White">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Header Section -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20" HorizontalAlignment="Center">
+            <TextBlock Text="Edit Address" FontSize="20" FontWeight="Bold" Foreground="#FFD700" />
+            <TextBlock Text="Update or add a new shipping address" FontSize="14" FontStyle="Italic" Foreground="#B0B0B0" />
+        </StackPanel>
+
+        <!-- Input Fields Section -->
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Address Line -->
+            <Label Grid.Row="0" Grid.Column="0" Content="Address Line:" FontSize="14" FontWeight="Bold" Foreground="#FFD700" Margin="0,0,10,10" />
+            <TextBox Grid.Row="0" Grid.Column="1" x:Name="AddressLineTextBox" Background="#333333" Foreground="White" BorderBrush="#FFD700" Margin="0,0,0,10" />
+
+            <!-- City -->
+            <Label Grid.Row="1" Grid.Column="0" Content="City:" FontSize="14" FontWeight="Bold" Foreground="#FFD700" Margin="0,0,10,10" />
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="CityTextBox" Background="#333333" Foreground="White" BorderBrush="#FFD700" Margin="0,0,0,10" />
+
+            <!-- Postal Code -->
+            <Label Grid.Row="2" Grid.Column="0" Content="Postal Code:" FontSize="14" FontWeight="Bold" Foreground="#FFD700" Margin="0,0,10,0" />
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="PostalCodeTextBox" Background="#333333" Foreground="White" BorderBrush="#FFD700" />
+        </Grid>
+
+        <!-- Button Section -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Content="OK" Width="100" Background="#FFD700" Foreground="Black" FontWeight="Bold" Click="OnOkButtonClick" />
+            <Button Content="Cancel" Width="100" Background="#333333" Foreground="White" FontWeight="Bold" Margin="10,0,0,0" Click="OnCancelButtonClick" />
+        </StackPanel>
+    </Grid>
+</Window>
